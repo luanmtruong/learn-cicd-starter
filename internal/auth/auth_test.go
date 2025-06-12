@@ -45,7 +45,7 @@ func TestGetAPIKey(t *testing.T) {
 		"Authorization": []string{"-"},
 	}
 	key, err = GetAPIKey(headers)
-	require.NoError(t, err)
+	require.EqualError(t, err, "malformed authorization header")
 	assert.Empty(t, key)
 }
 
