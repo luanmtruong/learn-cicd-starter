@@ -48,4 +48,3 @@ func TestGetAPIKey(t *testing.T) {
 	require.EqualError(t, err, "malformed authorization header")
 	assert.Empty(t, key)
 }
-
